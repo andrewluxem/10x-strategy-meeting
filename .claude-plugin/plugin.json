@@ -1,0 +1,18 @@
+{
+  "name": "10x-strategy-meeting",
+  "version": "1.0.0",
+  "description": "Run a 10x strategy session that produces moonshot ideas, not ten percent tweaks. Two artifacts: a Session Packet with groups, roles, and tailored starter questions, and a Session Capture with every idea routed to an owner and a date. Static: no network calls, no remote fetch, no auto-update.",
+  "author": {
+    "name": "Andrew Luxem"
+  },
+  "homepage": "https://github.com/andrewluxem/10x-strategy-meeting",
+  "repository": "https://github.com/andrewluxem/10x-strategy-meeting",
+  "license": "MIT",
+  "keywords": [
+    "strategy",
+    "brainstorming",
+    "planning",
+    "facilitation",
+    "management"
+  ]
+}

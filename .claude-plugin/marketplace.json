@@ -1,0 +1,14 @@
+{
+  "name": "10x-strategy-meeting",
+  "owner": { "name": "Andrew Luxem" },
+  "description": "10x-strategy-meeting, run a strategy session that reaches for an order of magnitude",
+  "plugins": [
+    {
+      "name": "10x-strategy-meeting",
+      "source": "./",
+      "description": "Two modes ending in a working document: Session Packet and Session Capture. Static: no network calls, no remote fetch, no auto-update. Version-pinned.",
+      "category": "productivity",
+      "tags": ["strategy", "brainstorming", "planning", "facilitation"]
+    }
+  ]
+}

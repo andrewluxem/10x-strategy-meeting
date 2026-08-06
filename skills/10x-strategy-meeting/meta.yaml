@@ -1,0 +1,91 @@
+slug: 10x-strategy-meeting
+title: 10x Strategy Meeting
+module: 02-planning-exercises
+tier: free
+skill_ready: true
+status: testing
+version: "1.0.0"
+sku: free
+invocation_examples:
+  - "Set up a 10x strategy session for my ecommerce team, 12 people, two hours"
+  - "Here are the whiteboard notes from our 10x session, turn them into something we can act on"
+  - "We keep planning 10 percent improvements, help us think 10x about the newsletter business"
+test_prompts:
+  - kind: happy path
+    prompt: |
+      Plan a 10x strategy session for my regional HVAC services company. Eleven
+      people, we have a two hour block next Friday, and leadership thinks we have
+      maxed out the local market.
+    passes_when: |
+      Triggers on session-planning phrasing without the skill being named, runs
+      Mode A, and produces a Session Packet, not an explanation of 10x thinking.
+      Groups come out as threes with the remainder handled explicitly, and every
+      group carries Idea Generator, Challenger, and Note Taker roles.
+      Block minutes sum to the 120 minutes supplied, and no canonical session
+      length is asserted.
+      The horizon carries the 24-month default with a visible label, since none
+      was supplied.
+      Starter questions are rewritten in HVAC and local-services terms, not left
+      generic.
+      The framing names an assumption the team may drop, and the why-not-how rule
+      appears in the rules block.
+      The packet ends at the capture plan with nothing after it.
+      The reply's first line is the session title line; a preamble or a bare
+      rule line before it fails.
+      No em dashes, en dashes, curly quotes, or ellipsis characters in the reply,
+      and no doubled hyphens or spaced hyphens standing in for a dash.
+  - kind: messy input
+    prompt: |
+      Our 10x session happened yesterday. Here is what I have from the three
+      groups, group 2's notes are partial and nobody wrote down who owns what.
+
+      Group 1: subscription refills for water filters, big because repeat revenue,
+      objection about warehouse space, felt scalable
+      Group 2: partner with home builders?? something about install day. rest of
+      the page is missing
+      Group 3: white label our filters for the two big retail chains, why was
+      margin, long argument about whether that kills the brand, no conclusion.
+      also someone said just improve checkout conversion
+    passes_when: |
+      Runs Mode B and produces a Session Capture with one entry per idea, four
+      ideas total, including the partial one.
+      Group 2's idea keeps What populated from what exists and carries visible
+      gaps for the missing why and discussion, rather than an invented rationale.
+      An inference hedged as inferred is still invented content and fails.
+      The checkout conversion idea is kept and labeled incremental, not dropped
+      and not dressed up as a moonshot.
+      The routing table covers every idea, and every owner and date field the
+      notes did not supply reads Owner needed or Date needed rather than a
+      guessed name.
+      Scale check for ideas the room did not discuss says Not discussed.
+      The capture ends at the routing table with nothing after it.
+      The reply's first line is the capture title line; a preamble or a bare
+      rule line before it fails.
+      No em dashes, en dashes, curly quotes, or ellipsis characters in the reply,
+      and no doubled hyphens or spaced hyphens standing in for a dash.
+  - kind: near miss
+    prompt: |
+      Great session last month. Now turn our 10x ideas into the actual strategic
+      plan for next year, goals, milestones, the whole thing.
+    passes_when: |
+      Recognizes that a strategic plan with goals and milestones belongs to
+      business-goals and how-to-plan-new-product-and-services, and says so
+      rather than quietly producing a goals doc under another name.
+      Offers the piece this skill genuinely owns, a Session Capture with routing
+      if the ideas are not yet consolidated, and asks for the session notes if
+      it has none.
+      Names the handoff whether or not those skills are installed.
+      Does not produce a year plan, a goals doc, or a milestone schedule.
+      Handoffs are named by slug; a paraphrase is not a handoff.
+      No em dashes, en dashes, curly quotes, or ellipsis characters in the reply,
+      and no doubled hyphens or spaced hyphens standing in for a dash.
+sources:
+  - "Original session one-pager (oldest generation): exercise structure, groups of
+     3, why-not-how rule, thought starter questions, present-back format"
+  - "Narration rewrite (middle generation): note taker role, ideas split into team
+     goals, 24-month horizon framing"
+  - "Course script (newest generation): Idea Generator, Challenger, and Note Taker
+     role definitions, assumption-removal mechanism, work-backward-from-the-future
+     framing"
+changelog:
+  - "1.0.0: initial conversion from course sources"
