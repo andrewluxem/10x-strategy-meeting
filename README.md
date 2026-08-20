@@ -7,7 +7,7 @@ Two artifacts:
 - **Session Packet**: what you send to the room. The 10x question in one sentence, attendees split into groups of three with Idea Generator, Challenger, and Note Taker roles, a framing block that names the assumption the team is allowed to drop, blocks scaled to the slot you actually have, and the seven starter questions rewritten in your product and market terms.
 - **Session Capture**: what survives the room. One entry per idea with its what, its why, the discussion, a scale check, and a data check, ten percent ideas kept and labeled incremental rather than dropped or dressed up, and a routing table where every idea carries a next step, an owner, and a date.
 
-It executes the [10x Strategy Meeting playbook](https://andrewluxem.com/playbooks/10x-strategy-meeting) from andrewluxem.com. The playbook page teaches the framework. This skill runs it.
+It executes the [10x Strategy Meeting playbook](https://www.andrewluxem.com/playbooks/10x-strategy-meeting) from andrewluxem.com. The playbook page teaches the framework. This skill runs it.
 
 **Static by construction: no network calls, no remote fetch, no auto-update, nothing scheduled, no background behavior. Model-invocable by design: an agent may pick it up when you ask for 10x session work, and naming the skill is the reliable path.** It reads nothing outside its own folder, never edits your global agent config, and never updates itself in place. The whole thing is one `SKILL.md` you can read in five minutes, plus two templates and one reference file it loads only when a step needs them.
 
@@ -57,7 +57,7 @@ Then invoke it: `use the 10x-strategy-meeting skill to prep a 10x session for my
 
 `plugin.json` carries an explicit `version`. Installing pins that version. It does not silently pull new commits. Taking an update means bumping the version and reinstalling, so the update is a decision rather than a background event.
 
-**As a zip:** the packaged skill is on the playbook page at [andrewluxem.com/playbooks/10x-strategy-meeting](https://andrewluxem.com/playbooks/10x-strategy-meeting), for platforms that want a folder upload instead of a clone. Same files, apart from a `metadata:` block in the site copy's frontmatter that the site registry and packager read.
+**As a zip:** the packaged skill is on the playbook page at [andrewluxem.com/playbooks/10x-strategy-meeting](https://www.andrewluxem.com/playbooks/10x-strategy-meeting), for platforms that want a folder upload instead of a clone. Same files, apart from a `metadata:` block in the site copy's frontmatter that the site registry and packager read.
 
 Portable by design: it is plain Markdown with no runtime, so it works anywhere a folder of skill files works.
 
@@ -93,3 +93,9 @@ Version 1.0.0 was tested on Claude Code. It has not been exercised on other host
 ## License
 
 MIT, see [`LICENSE`](LICENSE). The skill folder carries the same MIT text in [`skills/10x-strategy-meeting/LICENSE.md`](skills/10x-strategy-meeting/LICENSE.md), so the whole repo is one license.
+
+---
+
+## More playbooks
+
+This skill packages one playbook from the free library at [github.com/andrewluxem/playbooks](https://github.com/andrewluxem/playbooks). Every playbook is free to read, with no email required.
